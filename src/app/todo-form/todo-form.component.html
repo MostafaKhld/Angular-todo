@@ -1,0 +1,13 @@
+<form [formGroup]="newTodoForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label class="form-label" for="TodoTextInput">Enter a Todo </label>
+    <input
+      type="text"
+      class="form-control"
+      id="TodoTextInput"
+      formControlName="newTodo"
+      placeholder="Enter a Todo"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

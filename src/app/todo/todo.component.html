@@ -1,0 +1,29 @@
+<div class="list-group-item">
+  <div class="row w-100">
+  <div class="col-sm-8" >
+    <p [ngClass]="todo.completed ? 'isDone' : ''">
+      {{ todo.text }}
+    </p>
+    </div>
+    <div class="col-sm-2" >
+    <button
+      type="submit"
+      class="btn col mb-2 mx-2"
+      [ngClass]="todo.completed ? 'btn-warning' : 'btn-success'"
+      (click)="onDone()"
+    >
+      {{ todo.completed ? "unDone" : "Done" }}
+    </button>
+    </div>
+    <div class="col-sm-2" >
+    <button
+      type="submit"
+      id="Delete"
+      class="btn btn-danger col mb-2 mx-2"
+      (click)="onDelete()"
+    >
+      Delete
+    </button>
+    <div class="col-sm-2" >
+  </div>
+</div>
